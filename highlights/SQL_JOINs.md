@@ -1,5 +1,4 @@
-# SQL JOINs Explained with AdventureWorks Examples
-
+# SQL JOINs 
 ## 📖 Overview  
 The purpose of **JOIN** statements is to pull data from multiple tables in a relational database. They enable the retrieval of related data stored across different tables, making queries more efficient and powerful. 
 
