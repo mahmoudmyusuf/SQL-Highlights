@@ -23,7 +23,7 @@ SSMS works with both SQL Server 2022 and SQL Server 2019.
 
 ### 3️⃣ Download Sample Database Backup Files  
 Use these links to download the appropriate **sample database** for your scenario:  
-
+  ![Restore Database](../img/AdventureWorksbak.jpg)  
 - **[AdventureWorks2022.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2022.bak)** → For **OLTP** (Online Transaction Processing), compatible with SQL Server 2022.
 - **[AdventureWorks2019.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2019.bak)** → For **OLTP** (Online Transaction Processing), compatible with SQL Server 2019.
 
@@ -33,7 +33,7 @@ Use these links to download the appropriate **sample database** for your scenari
 
 1. **Open SSMS** and connect to your SQL Server instance.  
 2. **Right-click `Databases`** in **Object Explorer** > **Restore Database...** to launch the **Restore Database wizard**.  
-   ![Restore Database](img/restoreDB.jpg)  
+   ![Restore Database](../img/restoreDB.jpg)  
 3. Select **Device** and then click the ellipsis **(...)** to choose a device.  
 4. Click **Add**, then **browse** and select the **.bak file** you downloaded.  
 5. Click **OK** to confirm your selection and close the **Select backup devices** window.  
