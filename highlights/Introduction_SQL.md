@@ -1,4 +1,7 @@
-# Key Takeaways and Notes
+# Introduction to SQL 
+This introduction covers key concepts in SQL, including data storage in tables, common SQL statements, and essential terms like primary and foreign keys. It highlights SQL database types, best practices for query writing, and tips for using aliases, naming conventions, and formatting to improve query efficiency and readability.
+
+---
 
 ## 📌 Data Stored in SQL Databases  
 1. Stored in **tables**, similar to Excel spreadsheets, with **rows** and **columns**.  
