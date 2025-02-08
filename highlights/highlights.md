@@ -34,21 +34,6 @@ A **SQL statement** is a correctly written **SQL code** that tells the database 
 
 ---
 
-## 📌 Good to Know  
-1. ✅ **SQL queries are case-insensitive**, meaning they will run successfully whether commands are written in **upper** or **lower** case.  
-2. ✅ It is a **best practice** to capitalize all **SQL commands** (e.g., `SELECT`, `FROM`) and keep everything else in **lowercase**.  
-3. ✅ **SQL is case-sensitive** when it comes to **text data** stored in SQL tables.  
-4. ✅ Use **underscores** (`_`) and **avoid spaces** in column names.  
-   - If a column or table name contains spaces, **use double quotes (`""`)** to refer to it.  
-5. ✅ You can use **single (`'`) or double (`"`) quotes** for text values.  
-   - If the text contains an **apostrophe (`'`)**, use **double quotes** (`"`) to avoid errors.  
-6. ✅ **SQL queries ignore spaces**, so you can add as many spaces and blank lines between code as needed.  
-7. ✅ **Best practice**: End each statement with a **semicolon (`;`)**.  
-   - Some SQL environments **require** a semicolon at the end of your query to execute it.  
-8. ✅ Save SQL query files with a `.sql` extension in **Atom** or **Sublime** to enable **SQL syntax highlighting**.  
-
----
-
 ## 📌 Some Definitions  
 
 ### 🔹 Primary Key (PK)  
