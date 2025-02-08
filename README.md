@@ -34,3 +34,6 @@ Check out [`SQL Query Essentials`](highlights/SQL_Query.md) for understanding SQ
 
 ### 4. **Get Started with JOIN**  
 Dive into [`SQL JOINs`](highlights/SQL_JOINs.md) for a deep understanding of SQL JOIN types (INNER, LEFT, RIGHT, FULL OUTER), with clear explanations and examples to help you work with multiple tables.
+
+### 🔗 Navigation
+ Next: [`Setting Up SQL Server and Database`](highlights/setup.md)
