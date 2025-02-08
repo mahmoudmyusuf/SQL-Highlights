@@ -245,5 +245,5 @@ FROM Sales.SalesOrderDetail;
 ---
 
 ### 🔗 Navigation
- Previous: [[`Introduction to SQL`](Introduction_SQL.md) | Next: [`SQL JOINs`](SQL_JOINs.md)
+ Previous: [`Introduction to SQL`](Introduction_SQL.md) | Next: [`SQL JOINs`](SQL_JOINs.md)
  
