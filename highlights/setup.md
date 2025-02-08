@@ -52,3 +52,6 @@ Use these links to download the appropriate **sample database** for your scenari
 ---
 
 💡 *This guide ensures a smooth setup for SQL Server, SSMS, and sample databases so you can start working efficiently.* 🚀  
+
+### 🔗 Navigation
+ Previous: [`ReadME`](../README.md) | Next: [`Introduction to SQ`](Introduction_SQL.md)
