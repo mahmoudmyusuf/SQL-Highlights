@@ -133,3 +133,6 @@ JOIN orders o ON c.id = o.customer_id;
 ```
 
 💡 By following these key takeaways, you can write better, cleaner, and more efficient SQL queries! 🚀
+
+### 🔗 Navigation
+ Previous: [`Setting Up SQL Server and Database`](setup.md) | Next: [`SQL Query Essentials`](SQL_Query.md)
