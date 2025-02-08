@@ -24,9 +24,8 @@ SSMS works with both SQL Server 2022 and SQL Server 2019.
 ### 3️⃣ Download Sample Database Backup Files  
 Use these links to download the appropriate **sample database** for your scenario:  
 
-- **[AdventureWorks2022.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2022.bak)** → For **OLTP** (Online Transaction Processing) workloads.  
-- **[AdventureWorks2019.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2019.bak)** → For compatibility with SQL Server 2019.  
-- **[WideWorldImporters-Full.bak](https://github.com/Microsoft/sql-server-samples/releases/download/wide-world-importers/WideWorldImporters-Full.bak)** → For a **modern OLTP** sample database.  
+- **[AdventureWorks2022.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2022.bak)** → For **OLTP** (Online Transaction Processing), compatible with SQL Server 2022.
+- **[AdventureWorks2019.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2019.bak)** → For **OLTP** (Online Transaction Processing), compatible with SQL Server 2019.
 
 ---
 
