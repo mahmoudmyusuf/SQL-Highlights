@@ -216,6 +216,7 @@ FROM Sales.SalesOrderDetail;
 ### Case Sensitivity  
 - SQL commands (`SELECT`, `FROM`, `WHERE`, etc.) **are NOT case-sensitive**.
 - **Best Practice:** Use **uppercase for SQL commands** and lowercase for table/column names.
+- **SQL is case-sensitive** when it comes to **text data** stored in SQL tables.  
 
 ### Naming Conventions  
 - Use **underscores (`_`)** instead of spaces for column names.
@@ -226,9 +227,11 @@ FROM Sales.SalesOrderHeader;
 ```
 
 ### Handling Text Data  
-- **Use single quotes (`'`) for text values**:
+- **You can use single (`'`) or double (`"`) quotes for text values.**
 ```sql
-SELECT FirstName FROM Person.Person WHERE FirstName = 'John';
+SELECT FirstName
+FROM Person.Person
+WHERE FirstName = 'John';
 ```
 - **If text contains an apostrophe (`'`), use double quotes (`"`)**:
 ```sql
@@ -238,6 +241,10 @@ WHERE FirstName = "O'Brien";
 ```
 
 ### SQL Query Formatting  
+- **Best practice**: End each statement with a **semicolon (`;`)**.  
+   - Some SQL environments **require** a semicolon at the end of your query to execute it.
+- Save SQL query files with a `.sql` extension in **Atom** or **Sublime** to enable **SQL syntax highlighting**. 
+- **SQL queries ignore spaces**, so you can add as many spaces and blank lines between code as needed.  
 - **Use indentation & spacing** for readability:
 ```sql
 SELECT  
