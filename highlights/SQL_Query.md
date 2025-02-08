@@ -148,8 +148,8 @@ FROM Sales.SalesOrderHeader;
 SELECT SUM(LineTotal) AS TotalSales
 FROM Sales.SalesOrderDetail
 WHERE LineTotal > 500;
-
 ```
+The `SUM(LineTotal)` sums up the values that passed the filter, returning the total sales where LineTotal is greater than 500.
 
 #### MIN()
 Find the **earliest order date**:
