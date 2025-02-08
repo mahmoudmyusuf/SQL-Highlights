@@ -80,7 +80,7 @@ When executing a query, SQL processes the **JOIN** and everything in the **ON** 
 - **RIGHT JOIN** → All RIGHT table rows + matched LEFT table rows  
 - **FULL OUTER JOIN** → All rows from both tables  
 
-By mastering JOINs, you can efficiently retrieve complex data relationships from databases like **AdventureWorks**.
+💡 By mastering JOINs, you can efficiently retrieve complex data relationships from databases like **AdventureWorks**.🚀
 
 ---
 
