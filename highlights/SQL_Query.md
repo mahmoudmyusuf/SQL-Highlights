@@ -240,4 +240,7 @@ FROM Sales.SalesOrderDetail;
 | **SUM()** | Total of a column | `SELECT SUM(TotalDue) FROM Sales.SalesOrderHeader;` |
 | **MIN()** | Minimum value | `SELECT MIN(OrderDate) FROM Sales.SalesOrderHeader;` |
 | **AVG()** | Average value | `SELECT AVG(TotalDue) FROM Sales.SalesOrderHeader;` |
+---
 
+### 🔗 Navigation
+ Previous: [[`Introduction to SQL`](Introduction_SQL.md) | Next: [`SQL JOINs`](SQL_JOINs.md)
