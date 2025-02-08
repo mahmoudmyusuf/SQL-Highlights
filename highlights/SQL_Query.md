@@ -143,6 +143,14 @@ FROM Sales.SalesOrderHeader;
 ```
 📝 **Note:** `SUM()` can only be used on numeric columns. `NULL` values are ignored in the calculation.
 
+**Adding Condtion for Aggregation**
+```sql
+SELECT SUM(LineTotal) AS TotalSales
+FROM Sales.SalesOrderDetail
+WHERE LineTotal > 500;
+
+```
+
 #### MIN()
 Find the **earliest order date**:
 ```sql
@@ -163,7 +171,7 @@ FROM Sales.SalesOrderHeader;
 ## 7️⃣ SQL Aggregation (With GROUP BY)  
 When you want to aggregate data grouped by certain columns, you use the `GROUP BY` clause.
 
-### Example:  
+### Example with SUM:  
 Find the **total sales** for each **product**:
 ```sql
 SELECT ProductID, SUM(LineTotal) AS TotalSales  
@@ -271,4 +279,4 @@ ORDER BY TotalDue DESC;
 | **SUM()** | Total of a column | `SELECT SUM(TotalDue) FROM Sales.SalesOrderHeader;` |
 | **MIN()** | Minimum value | `SELECT MIN(OrderDate) FROM Sales.SalesOrderHeader;` |
 | **AVG()** | Average value | `SELECT AVG(TotalDue) FROM Sales.SalesOrderHeader;` |
-```
+
