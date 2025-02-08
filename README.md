@@ -1,20 +1,36 @@
-# SQL-Highlights
-This repository contains structured SQL scripts, highlights, and setup instructions for database management and analysis
 
-## 📌 Overview
-This repository is structured to manage SQL scripts, database setup instructions, and key highlights in a **clear and organized** way.
+# SQL Highlights
+This repository contains structured SQL scripts, highlights, and setup instructions for database management and analysis.
+
+## 📖 Overview
+This repository is organized to provide SQL scripts, database setup instructions, and key highlights in a **clear and structured** way, making it easier to understand and apply SQL concepts.
 
 ## 📂 Repository Structure
-- **📜 README.md** → This file! Overview of the project.
-- **📜 setup.md** → Steps to install and configure SQL programs and access the database.
-- **📜 highlights.md** → Key takeaways, observations, and important notes.
-- **📂 sql-scripts/** → SQL scripts, for reference:
-  - `queries.sql` → Frequently used queries.
+- **📜 README.md** → Overview of the project (this file).
+- **📂 highlights/** → Contains SQL highlights, including:
+  - **📜 setup.md** → Steps to install and configure SQL programs and access the database.
+  - **📜 Introduction_SQL.md** → Overview of SQL fundamentals, including primary and foreign keys, and best practices.
+  - **📜 SQL_Query.md** → Essential SQL statements including `SELECT`, `TOP`, `ORDER BY`, `WHERE`, `LIKE`, and more, with practical examples.
+  - **📜 SQL_JOINs.md** → Detailed explanations of SQL `JOIN` types (INNER, LEFT, RIGHT, FULL OUTER) with examples.
+- **📂 sql-scripts/** → SQL scripts for reference:
+  - `queries.sql` → Frequently used SQL queries.
 
 ## 🛠️ Getting Started
-1. **Set Up Your Environment**  
-   Follow the instructions in [`setup.md`](setup.md) to install and configure your SQL database.
-   
-2. **Create Your Own Queries**  
-   Read [`highlights.md`](highlights.md) related to the required topic to create your own query.  
-   You will find the relevant queries already available in the `sql-scripts/` folder for reference.
+
+### 1. **Set Up Your Environment**  
+Follow the [`setup`](highlights/setup.md) guide to install and configure Microsoft SQL Server and SQL Server Management Studio (SSMS).
+- **Download Prerequisites**:
+  - Microsoft SQL Server (2022 or 2019 Developer Edition)
+  - SQL Server Management Studio (SSMS)
+  - AdventureWorks sample database (provided in the repository)
+  
+Once the setup is complete, you can use the provided scripts and queries to interact with databases and practice SQL queries.
+
+### 2. **Learn SQL Basics**  
+Read [`Introduction to SQL`](highlights/Introduction_SQL.md) to understand how data is stored in tables and get familiar with common SQL definitions and statements like `SELECT`, `INSERT`, and `UPDATE`.
+
+### 3. **Create Your Own Queries**  
+Check out [`SQL Query`](highlights/SQL_Query.md) for essential SQL statements like `SELECT`, `TOP`, `ORDER BY`, `WHERE`, `LIKE`, and more, with practical examples to help you write your own queries.
+
+### 4. **Get Started with JOIN**  
+Dive into [`SQL JOINs`](highlights/SQL_JOINs.md) for a deep understanding of SQL JOIN types (INNER, LEFT, RIGHT, FULL OUTER), with clear explanations and examples to help you work with multiple tables.
