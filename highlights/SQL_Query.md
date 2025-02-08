@@ -1,3 +1,4 @@
+
 # SQL Query Essentials
 
 ## 📖 Overview  
@@ -29,63 +30,6 @@ SELECT SalesOrderID, OrderDate, TotalDue
 FROM Sales.SalesOrderHeader;
 ```
 📝 **Note:** The `SELECT` statement does **not** create a new table, it only retrieves and displays the data.
-
----
-
-## 1.1️⃣ COUNT()  
-The `COUNT()` function is used to count the number of rows in a table or in a specific column.
-
-### Example:  
-Count the **total number of orders**:
-```sql
-SELECT COUNT(*)  
-FROM Sales.SalesOrderHeader;
-```
-📝 **Note:** `COUNT(*)` counts **all rows**, including those with `NULL` values.
-
----
-
-## 1.2️⃣ SUM()  
-The `SUM()` function adds up the values of a numeric column. It ignores `NULL` values.
-
-### Example:  
-Find the **total sales amount** for all orders:
-```sql
-SELECT SUM(TotalDue)  
-FROM Sales.SalesOrderHeader;
-```
-📝 **Note:** `SUM()` can only be used on numeric columns. `NULL` values are ignored in the calculation.
-
----
-
-## 1.3️⃣ MIN()  
-The `MIN()` function returns the **smallest** value in a column. It can be used on **non-numeric columns** as well, returning the earliest date or the smallest alphabetical value.
-
-### Example:  
-Find the **earliest order date**:
-```sql
-SELECT MIN(OrderDate)  
-FROM Sales.SalesOrderHeader;
-```
-Find the **first name** in alphabetical order:
-```sql
-SELECT MIN(FirstName)  
-FROM Person.Person;
-```
-📝 **Note:** `MIN()` can be used with non-numeric data types like strings and dates.
-
----
-
-## 1.4️⃣ AVG()  
-The `AVG()` function calculates the **average** value of a numeric column. It ignores `NULL` values in both the numerator and the denominator.
-
-### Example:  
-Find the **average total due** for all orders:
-```sql
-SELECT AVG(TotalDue)  
-FROM Sales.SalesOrderHeader;
-```
-📝 **Note:** `AVG()` can only be used on numeric columns, and `NULL` values are ignored in the calculation.
 
 ---
 
@@ -136,7 +80,7 @@ ORDER BY CustomerID, OrderDate DESC;
 ## 4️⃣ WHERE Statement (Filtering Data)  
 The `WHERE` clause **filters** results based on conditions. It can be split into the following sections:
 
-### 4.1 Filtering Numeric Data  
+### 6.1 Filtering Numeric Data  
 Retrieve **orders placed after January 1, 2024**:
 ```sql
 SELECT SalesOrderID, OrderDate, TotalDue  
@@ -156,110 +100,7 @@ FROM Sales.SalesOrderHeader
 WHERE CustomerID = 10001;
 ```
 
-### 4.2 Filtering Non-Numeric Data  
-Retrieve **customers from London**:
-```sql
-SELECT BusinessEntityID, FirstName, LastName, City  
-FROM Person.Person  
-WHERE City = 'London';
-```
-Retrieve **customers NOT from London**:
-```sql
-SELECT BusinessEntityID, FirstName, LastName, City  
-FROM Person.Person  
-WHERE City != 'London';
-```
-
-### 4.3 Using WHERE with Operators  
-
-- **Common symbols**:
-  - `>` (greater than)
-  - `<` (less than)
-  - `>=` (greater than or equal to)
-  - `<=` (less than or equal to)
-  - `=` (equal to)
-  - `!=` (not equal to)
-  - `NOT LIKE`, `AND`, `OR`, `BETWEEN`, `IS`, `IS NOT`, `NULL` 
-
-#### LIKE (Pattern Matching)  
-Find customers whose **first name starts with "A"**:
-```sql
-SELECT BusinessEntityID, FirstName, LastName  
-FROM Person.Person  
-WHERE FirstName LIKE 'A%';
-```
-Find customers whose **last name contains "son"**:
-```sql
-SELECT BusinessEntityID, FirstName, LastName  
-FROM Person.Person  
-WHERE LastName LIKE '%son%';
-```
-
-#### NOT LIKE (Excluding Patterns)  
-Find customers whose **first name does not start with "A"**:
-```sql
-SELECT BusinessEntityID, FirstName, LastName  
-FROM Person.Person  
-WHERE FirstName NOT LIKE 'A%';
-```
-
-#### IN (Multiple Values)  
-Find customers from **London, Paris, or Sydney**:
-```sql
-SELECT BusinessEntityID, FirstName, LastName, City  
-FROM Person.Person  
-WHERE City IN ('London', 'Paris', 'Sydney');
-```
-
-#### NOT IN (Excluding Values)  
-Find customers **not from London or Paris**:
-```sql
-SELECT BusinessEntityID, FirstName, LastName, City  
-FROM Person.Person  
-WHERE City NOT IN ('London', 'Paris');
-```
-
-#### AND (Combining Conditions)  
-Find orders where **TotalDue is greater than 1000** **and** the **OrderDate is after January 1, 2024**:
-```sql
-SELECT SalesOrderID, OrderDate, TotalDue  
-FROM Sales.SalesOrderHeader  
-WHERE TotalDue > 1000  
-  AND OrderDate > '2024-01-01';
-```
-
-#### OR (Alternative Conditions)  
-Find orders where the **TotalDue is less than 500** **or** the **CustomerID is 10001**:
-```sql
-SELECT SalesOrderID, OrderDate, TotalDue  
-FROM Sales.SalesOrderHeader  
-WHERE TotalDue < 500  
-   OR CustomerID = 10001;
-```
-
-#### BETWEEN (Range of Values)  
-Find orders where **TotalDue is between 500 and 1000**:
-```sql
-SELECT SalesOrderID, OrderDate, TotalDue  
-FROM Sales.SalesOrderHeader  
-WHERE TotalDue BETWEEN 500 AND 1000;
-```
-
-#### IS (Null Values)  
-Find **orders where `ShippedDate` is `NULL`** (i.e., not yet shipped):
-```sql
-SELECT SalesOrderID, OrderDate, ShippedDate  
-FROM Sales.SalesOrderHeader  
-WHERE ShippedDate IS NULL;
-```
-
-#### IS NOT (Not Null Values)  
-Find **orders where `ShippedDate` is NOT `NULL`** (i.e., shipped orders):
-```sql
-SELECT SalesOrderID, OrderDate, ShippedDate  
-FROM Sales.SalesOrderHeader  
-WHERE ShippedDate IS NOT NULL;
-```
+---
 
 ## 5️⃣ NULLs: Special Case  
 NULLs represent missing data or undefined values and are not equal to zeros or spaces. They are often ignored in aggregation functions. **NULLs** frequently occur when performing **Joins** or dealing with missing data.
@@ -274,20 +115,8 @@ NULLs represent missing data or undefined values and are not equal to zeros or s
     ```
 ---
 
-## 6️⃣ Derived Columns  
-Derived columns are calculated dynamically from existing data within the query. These columns are temporary and only exist in the output of the query.
-
-### Example:
-To calculate the **TotalPrice** for each order based on `Quantity` and `UnitPrice`:
-```sql
-SELECT ProductID, Quantity, UnitPrice, (Quantity * UnitPrice) AS TotalPrice  
-FROM Sales.SalesOrderDetail;
-```
-
----
-
-## 7️⃣ SQL Aggregation  
-SQL aggregation functions are used to summarize or aggregate data. These are often used with `GROUP BY`.
+## 6️⃣ SQL Aggregation (Without GROUP BY)  
+SQL aggregation functions are used to summarize or aggregate data. These functions can be used independently of the `GROUP BY` clause to aggregate values across all rows.
 
 ### Common Aggregation Functions:
 - **COUNT()**: Counts the number of rows.
@@ -295,6 +124,44 @@ SQL aggregation functions are used to summarize or aggregate data. These are oft
 - **AVG()**: Calculates the average value.
 - **MIN()**: Finds the minimum value.
 - **MAX()**: Finds the maximum value.
+
+### Examples:
+
+#### COUNT()
+Count the **total number of orders**:
+```sql
+SELECT COUNT(*)  
+FROM Sales.SalesOrderHeader;
+```
+📝 **Note:** `COUNT(*)` counts **all rows**, including those with `NULL` values.
+
+#### SUM()
+Find the **total sales amount** for all orders:
+```sql
+SELECT SUM(TotalDue)  
+FROM Sales.SalesOrderHeader;
+```
+📝 **Note:** `SUM()` can only be used on numeric columns. `NULL` values are ignored in the calculation.
+
+#### MIN()
+Find the **earliest order date**:
+```sql
+SELECT MIN(OrderDate)  
+FROM Sales.SalesOrderHeader;
+```
+
+#### AVG()
+Find the **average total due** for all orders:
+```sql
+SELECT AVG(TotalDue)  
+FROM Sales.SalesOrderHeader;
+```
+📝 **Note:** `AVG()` can only be used on numeric columns, and `NULL` values are ignored in the calculation.
+
+---
+
+## 7️⃣ SQL Aggregation (With GROUP BY)  
+When you want to aggregate data grouped by certain columns, you use the `GROUP BY` clause.
 
 ### Example:  
 Find the **total sales** for each **product**:
@@ -320,10 +187,23 @@ FROM Sales.SalesOrderDetail
 GROUP BY ProductID  
 HAVING SUM(LineTotal) > 500;
 ```
+📝 **Note:** `Aggregators` only aggregate vertically — the values of a column.If you want to perform a calculation across rows, you would do this with simple arithmetic..
 
 ---
 
-## 8️⃣  SQL Best Practices  
+## 8️⃣ Derived Columns  
+Derived columns are calculated dynamically from existing data within the query. These columns are temporary and only exist in the output of the query.
+
+### Example:
+To calculate the **TotalPrice** for each order based on `Quantity` and `UnitPrice`:
+```sql
+SELECT ProductID, Quantity, UnitPrice, (Quantity * UnitPrice) AS TotalPrice  
+FROM Sales.SalesOrderDetail;
+```
+
+---
+
+## 9️⃣ SQL Best Practices  
 
 ### Case Sensitivity  
 - SQL commands (`SELECT`, `FROM`, `WHERE`, etc.) **are NOT case-sensitive**.
@@ -391,4 +271,4 @@ ORDER BY TotalDue DESC;
 | **SUM()** | Total of a column | `SELECT SUM(TotalDue) FROM Sales.SalesOrderHeader;` |
 | **MIN()** | Minimum value | `SELECT MIN(OrderDate) FROM Sales.SalesOrderHeader;` |
 | **AVG()** | Average value | `SELECT AVG(TotalDue) FROM Sales.SalesOrderHeader;` |
-
+```
