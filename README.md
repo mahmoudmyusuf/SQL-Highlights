@@ -1,6 +1,7 @@
 
 # SQL Highlights
 This repository contains structured SQL scripts, highlights, and setup instructions for database management and analysis.
+---
 
 ## 📖 Overview
 This repository is organized to provide SQL scripts, database setup instructions, and key highlights in a **clear and structured** way, making it easier to understand and apply SQL concepts.
@@ -14,6 +15,7 @@ This repository is organized to provide SQL scripts, database setup instructions
   - **📜 SQL_JOINs.md** → Detailed explanations of SQL `JOIN` types with examples.
 - **📂 sql-scripts/** → SQL scripts for reference:
   - `queries.sql` → Frequently used SQL queries.
+---
 
 ## 🛠️ Getting Started
 
@@ -34,6 +36,8 @@ Check out [`SQL Query Essentials`](highlights/SQL_Query.md) for understanding SQ
 
 ### 4. **Get Started with JOIN**  
 Dive into [`SQL JOINs`](highlights/SQL_JOINs.md) for a deep understanding of SQL JOIN types (INNER, LEFT, RIGHT, FULL OUTER), with clear explanations and examples to help you work with multiple tables.
+
+---
 
 ### 🔗 Navigation
  Next: [`Setting Up SQL Server and Database`](highlights/setup.md)
