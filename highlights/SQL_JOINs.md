@@ -65,7 +65,8 @@ ON p.BusinessEntityID = e.BusinessEntityID;
 ---
 
 ## ⚠️ NULL Values in JOINs  
-All JOINs except `INNER JOIN` allow us to pull rows that might exist only in one of the tables. This introduces **NULL**, representing missing values. For NULL handling strategies, refer to [SQL_Query](SQL_Query.md).
+All JOINs except `INNER JOIN` allow us to pull rows that might exist only in one of the tables. This introduces **NULL**, representing missing values. For NULL handling strategies, refer to **[SQL_Query - NULLs: Special Case](SQL_Query.md#5️⃣-nulls-special-case)**
+.
 
 ---
 
