@@ -46,9 +46,9 @@ Use these links to download the appropriate **sample database** for your scenari
 
 - After installation, configure your SQL Server following the **Setup Wizard**.  
 - Open **SQL Server Management Studio (SSMS)** and connect to your SQL Server instance.  
-- Explore SQL topics and key highlights in the **[`highlights`](highlights)** folder to find the topic you need.  
+- Explore SQL topics and key highlights in the **[`highlights`](../highlights)** folder to find the topic you need.  
 - Or, follow the navigation below for a step-by-step learning approach.  
-- The **[`sql-scripts`](sql-scripts)** folder contains ready-to-use queries for reference. 
+- The **[`sql-scripts`](../sql-scripts)** folder contains ready-to-use queries for reference. 
 
 ---
 
