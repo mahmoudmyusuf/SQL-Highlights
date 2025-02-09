@@ -137,4 +137,4 @@ JOIN orders o ON c.id = o.customer_id;
 ---
 
 ### 🔗 Navigation
- Previous: [`Setting Up SQL Server and Database`](setup.md) | Next: [`SQL Query Essentials`](SQL_Query.md)
+⬅️ **Previous:** [`Setting Up SQL Server and Database`](setup.md) | ➡️ **Next:** [`SQL Query Essentials`](SQL_Query.md)
