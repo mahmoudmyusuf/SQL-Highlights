@@ -85,4 +85,4 @@ When executing a query, SQL processes the **JOIN** and everything in the **ON** 
 ---
 
 ### 🔗 Navigation
- Previous: [`SQL Query Essentials`](SQL_Query.md) 
+⬅️ **Previous:** [`SQL Query Essentials`](SQL_Query.md) 
