@@ -40,4 +40,4 @@ Dive into **[`SQL JOINs`](highlights/SQL_JOINs.md)** for a deep understanding of
 ---
 
 ### 🔗 Navigation
- ▶️  **Next:** [`Setting Up SQL Server and Database`](highlights/setup.md)
+➡️ **Next:**  [`Setting Up SQL Server and Database`](highlights/setup.md)
