@@ -93,7 +93,7 @@ SELECT SalesOrderID, OrderDate, TotalDue
 FROM Sales.SalesOrderHeader  
 WHERE TotalDue > 1000;
 ```
-Retrieve **orders where CustomerID is 10001**:
+Retrieve **orders where SalesOrderID is 43659**:
 ```sql
 SELECT SalesOrderID, OrderDate, TotalDue  
 FROM Sales.SalesOrderHeader  
