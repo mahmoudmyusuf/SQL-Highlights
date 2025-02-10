@@ -79,18 +79,29 @@ Normalization ensures:
 - Use **underscores (`_`)** instead of spaces for column names.
 - If a table or column name **has spaces**, use **double quotes**:  
 ```sql
-SELECT "Order Date"
+SELECT OrderDate
 FROM Sales.SalesOrderHeader;
 ```
 
 ### Handling Text Data  
-- **You can use single (`'`) or double (`"`) quotes for text values.**
+- **SQL Server can accept single quote (`'`) or double (`"`) quotes for text values.**
+- **In MS SQL Server only use single quote (`'`)**
 ```sql
 SELECT FirstName
 FROM Person.Person
 WHERE FirstName = 'John';
 ```
-- **If text contains an apostrophe (`'`), use double quotes (`"`)**:
+- **If text contains an apostrophe (`'`)**:
+   - In MS SQL Server, if a string contains a single quote (`'`), you need to **escape it** by doubling the single quote (`''`). 
+
+```sql
+SELECT FirstName
+FROM Person.Person
+WHERE FirstName = 'O''Brien';
+```
+
+- Other SQL Server, that  accept single quote (`'`) and double (`"`) quotes for text values, Can deal with the single quote in `"O'Brien"` by using the double (`"`) quotes:
+
 ```sql
 SELECT FirstName
 FROM Person.Person
@@ -109,7 +120,7 @@ SELECT
     OrderDate,  
     TotalDue  
 FROM Sales.SalesOrderHeader  
-WHERE OrderDate > '2024-01-01'  
+WHERE OrderDate > '2011-01-01'  
 ORDER BY TotalDue DESC;
 ```
 
@@ -121,15 +132,17 @@ Aliasing is commonly used to:
 
 **Example of table aliasing:**  
 ```sql
-SELECT c.name, o.order_date  
-FROM customers AS c  
-JOIN orders AS o ON c.id = o.customer_id;
+SELECT p.BusinessEntityID, p.FirstName, p.LastName, e.JobTitle 
+FROM Person.Person As p
+JOIN HumanResources.Employee As e
+ON p.BusinessEntityID = e.BusinessEntityID;
 ```
 or without AS:
 ```sql
-SELECT c.name, o.order_date  
-FROM customers c  
-JOIN orders o ON c.id = o.customer_id;
+SELECT p.BusinessEntityID, p.FirstName, p.LastName, e.JobTitle 
+FROM Person.Person p
+JOIN HumanResources.Employee e
+ON p.BusinessEntityID = e.BusinessEntityID;
 ```
 
 💡 By following these key takeaways, you can write better, cleaner, and more efficient SQL queries! 🚀
