@@ -136,7 +136,7 @@ FROM Sales.SalesOrderHeader;
 📝 **Note:** `COUNT(*)` counts **all rows**, including those with `NULL` values.
 
 #### SUM()
-Find the **total sales amount** for all orders:
+Find the **total due amount** for all orders:
 ```sql
 SELECT SUM(TotalDue)  
 FROM Sales.SalesOrderHeader;
