@@ -49,7 +49,8 @@ Use these links to download the appropriate **sample database** for your scenari
 - Open **SQL Server Management Studio (SSMS)** and connect to your SQL Server instance.
   
   ![Restore Database](../img/SSMSConnect.jpg)  
-- **Navigate to the database** and start a new query by right clicking the database and select **"New Query"**.
+- **Navigate to the database** and start a new query
+    - Right click the `AdventureWorks2019` database and select **"New Query"**.
   
   ![Restore Database](../img/SSMSQuery.jpg)  
 - **Write and execute your SQL statements** in the query editor. 
