@@ -32,20 +32,27 @@ Use these links to download the appropriate **sample database** for your scenari
 ## 📌 Restoring a Sample Database  
 
 1. **Open SSMS** and connect to your SQL Server instance.  
-2. **Right-click `Databases`** in **Object Explorer** > **Restore Database...** to launch the **Restore Database wizard**.  
+2. **Right-click `Databases`** in **Object Explorer** > **Restore Database...** to launch the **Restore Database wizard**.
+   
    ![Restore Database](../img/restoreDB.jpg)  
-3. Select **Device** and then click the ellipsis **(...)** to choose a device.  
-4. Click **Add**, then **browse** and select the **.bak file** you downloaded.  
-5. Click **OK** to confirm your selection and close the **Select backup devices** window.  
-6. Check the **Files** tab to confirm that the **Restore As** location and file names match your intended destination.  
-7. Click **OK** to **restore your database**.  
+4. Select **Device** and then click the ellipsis **(...)** to choose a device.  
+5. Click **Add**, then **browse** and select the **.bak file** you downloaded.  
+6. Click **OK** to confirm your selection and close the **Select backup devices** window.  
+7. Check the **Files** tab to confirm that the **Restore As** location and file names match your intended destination.  
+8. Click **OK** to **restore your database**.  
 
 ---
 
 ## 📌 Next Steps  
 
 - After installation, configure your SQL Server following the **Setup Wizard**.  
-- Open **SQL Server Management Studio (SSMS)** and connect to your SQL Server instance.  
+- Open **SQL Server Management Studio (SSMS)** and connect to your SQL Server instance.
+  
+  ![Restore Database](../img/SSMSConnect.jpg)  
+- **Navigate to the database** and start a new query by right clicking the database and select **"New Query"**.
+  
+  ![Restore Database](../img/SSMSQuery.jpg)  
+- **Write and execute your SQL statements** in the query editor. 
 - Explore SQL topics and key highlights in the **[`highlights`](../highlights)** folder to find the topic you need.  
 - Or, follow the navigation below for a step-by-step learning approach.  
 - The **[`sql-scripts`](../sql-scripts)** folder contains ready-to-use queries for reference. 
