@@ -81,11 +81,11 @@ ORDER BY CustomerID, OrderDate DESC;
 The `WHERE` clause **filters** results based on conditions. It can be split into the following sections:
 
 ### 6.1 Filtering Numeric Data  
-Retrieve **orders placed after January 1, 2024**:
+Retrieve **orders placed after January 1, 2011**:
 ```sql
 SELECT SalesOrderID, OrderDate, TotalDue  
 FROM Sales.SalesOrderHeader  
-WHERE OrderDate > '2011-05-31';
+WHERE OrderDate > '2011-01-01';
 ```
 Retrieve **orders where TotalDue is greater than 1000**:
 ```sql
