@@ -85,7 +85,7 @@ Retrieve **orders placed after January 1, 2024**:
 ```sql
 SELECT SalesOrderID, OrderDate, TotalDue  
 FROM Sales.SalesOrderHeader  
-WHERE OrderDate > '2024-01-01';
+WHERE OrderDate > '2011-05-31';
 ```
 Retrieve **orders where TotalDue is greater than 1000**:
 ```sql
@@ -97,7 +97,7 @@ Retrieve **orders where CustomerID is 10001**:
 ```sql
 SELECT SalesOrderID, OrderDate, TotalDue  
 FROM Sales.SalesOrderHeader  
-WHERE CustomerID = 10001;
+WHERE SalesOrderID = 43659;
 ```
 
 ---
@@ -108,11 +108,11 @@ NULLs represent missing data or undefined values and are not equal to zeros or s
 #### Handling NULLs:
 - Use `IS NULL` or `IS NOT NULL` to check for NULL values instead of `=`. **`NULL`** isn't considered a value in SQL, but rather a property of the data. 
 - Example:
-    ```sql
-    SELECT *
-    FROM Sales.SalesOrderDetail
-    WHERE ShipDate IS NULL;
-    ```
+```sql
+SELECT *
+FROM Sales.SalesOrderDetail
+WHERE OrderQty IS NULL;
+```
 ---
 
 ## 6️⃣ SQL Aggregation (Without GROUP BY)  
@@ -205,7 +205,7 @@ Derived columns are calculated dynamically from existing data within the query. 
 ### Example:
 To calculate the **TotalPrice** for each order based on `Quantity` and `UnitPrice`:
 ```sql
-SELECT ProductID, Quantity, UnitPrice, (Quantity * UnitPrice) AS TotalPrice  
+SELECT ProductID, OrderQty, UnitPrice, (OrderQty * UnitPrice) AS TotalPrice  
 FROM Sales.SalesOrderDetail;
 ```
 
